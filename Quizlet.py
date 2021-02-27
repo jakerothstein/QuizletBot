@@ -1,3 +1,6 @@
+#Code made by Jake R 
+#Suck on dez nutz
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -25,22 +28,37 @@ LogInBtn.click()
 
 #Navagates to set and inputs the # of sets 
 input("Please Navagate to your desired Quizlet and press 'Enter' when ready: ")
-crdNum = int(input("What is the number of words in the Quizlet set: "))
-
+crdNum = driver.find_element_by_class_name("UIText.UIText--bodyThree")
+crdNum = crdNum.text
+crdNum = crdNum[2:]
+crdNum = int(crdNum)
 #Auto Flashcard program
 print("Completing Flashcards")
 flshCrd = driver.find_element_by_xpath("/html/body/div[3]/div[3]/div[1]/div/div/div/div[1]/div/div/div[2]/nav/div/div[1]/span[1]/a/div")
 flshCrd.click()
 
 i = 1
+arwClc = driver.find_element_by_xpath("/html/body/div[3]/main/div/div/div/div/div[2]/div/div/div[2]/div[2]/span/button/span")
 while(i <= crdNum):
-	arwClc = driver.find_element_by_xpath("/html/body/div[3]/main/div/div/div/div/div[2]/div/div/div[2]/div[2]/span/button/span")
 	arwClc.click()
 	i += 1
-time.sleep(.5)
 
-#back = driver.find_element_by_xpath("/html/body/div[3]/main/div/div/div/div/div[1]/div/aside/div[1]/a")
-#back.click()
+back = driver.find_element_by_xpath("/html/body/div[3]/main/div/div/div/div/div[1]/div/aside/div[1]/a")
+back.click()
 
+time.sleep(1)
 
+"""
+try:
+try:
+    crdNum = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "/html/body/div[3]/div[3]/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div[2]/div/section/div/div/h4/span"))
+    )
+    print(crdNum.text)
+finally:
+	num_filter = filter(str.isdigit, crdNum)
+	numStr = "".join(num_filter)
+	crdNum = numStr
+	print(crdNum)
+"""
 #driver.quit()
