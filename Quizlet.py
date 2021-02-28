@@ -26,7 +26,7 @@ pword.send_keys("PlantCloud9!")
 LogInBtn = driver.find_element_by_xpath("/html/body/div[8]/div/div[2]/form/button")
 LogInBtn.click()
 
-#Navagates to set and inputs the # of sets 
+#Navagates to set and finds the # of sets 
 input("Please Navagate to your desired Quizlet and press 'Enter' when ready: ")
 crdNum = driver.find_element_by_class_name("UIText.UIText--bodyThree")
 crdNum = crdNum.text
