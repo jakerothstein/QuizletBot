@@ -1,4 +1,4 @@
-#Code made by Jake R 
+#Code made by Jake R
 #Suck on dez nutz
 
 from selenium import webdriver
@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 #Chrome Window Setup
-driver = webdriver.Chrome()
+driver = webdriver.Chrome("C:\webdrivers\chromedriver.exe")
 driver.get("https://quizlet.com/")
 driver.maximize_window()
 
@@ -26,7 +26,7 @@ pword.send_keys("PlantCloud9!")
 LogInBtn = driver.find_element_by_xpath("/html/body/div[8]/div/div[2]/form/button")
 LogInBtn.click()
 
-#Navagates to set and finds the # of sets 
+#Navagates to set and finds the # of sets
 input("Please Navagate to your desired Quizlet and press 'Enter' when ready: ")
 crdNum = driver.find_element_by_class_name("UIText.UIText--bodyThree")
 crdNum = crdNum.text
