@@ -1,12 +1,12 @@
 #Code made by Jake R
 #Suck on dez nutz
 srtIcon = '''
-   ____          _       _        _     ____          _     ___      ___  
-  / __ \        (_)     | |      | |   |  _ \        | |   |__ \    / _ \ 
+   ____          _       _        _     ____          _     ___      ___
+  / __ \        (_)     | |      | |   |  _ \        | |   |__ \    / _ \
  | |  | | _   _  _  ____| |  ___ | |_  | |_) |  ___  | |_     ) |  | | | |
  | |  | || | | || ||_  /| | / _ \| __| |  _ <  / _ \ | __|   / /   | | | |
  | |__| || |_| || | / / | ||  __/| |_  | |_) || (_) || |_   / /_  _| |_| |
-  \___\_\ \__,_||_|/___||_| \___| \__| |____/  \___/  \__| |____|(_)\___
+  \___\_\ \__,_||_|/___||_| \___| \__| |____/  \___/  \__| |____|(_)\___/
 '''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -44,16 +44,22 @@ crdNum = int(crdNum)
 word1 = driver.find_elements_by_class_name("TermText.notranslate.lang-en")
 word2 = driver.find_elements_by_class_name("TermText.notranslate.lang-it")
 
-List1 = [] 
-List2 = [] 
+Questions = []
+Answers = []
 
 #Putting all the words into their corrasponding lists
 print("Scraping List... ")
 i = 0
-while (i <= crdNum - 15	):
-	List1.append(word1[i].text) 
-	List2.append(word2[i].text) 
+x = 0
+while (i <= Questions.len()):
+	List1.append(Questions[i].text)
+	List2.append(Answers[i].text)
 	i += 1
+for answer in Questions:
+    if answer = #(text on screen):
+        x = Questions.index(answer)
+#type Quizlet_Question[x] into quizlet as the solution
+
 print(List1)
 print(List2)
 
