@@ -6,7 +6,7 @@ srtIcon = '''
  | |  | | _   _  _  ____| |  ___ | |_  | |_) |  ___  | |_     ) |  | | | |
  | |  | || | | || ||_  /| | / _ \| __| |  _ <  / _ \ | __|   / /   | | | |
  | |__| || |_| || | / / | ||  __/| |_  | |_) || (_) || |_   / /_  _| |_| |
-  \___\_\ \__,_||_|/___||_| \___| \__| |____/  \___/  \__| |____|(_)\___/
+  \___\_\ \__,_||_|/___||_| \___| \__| |____/  \___/  \__| |____|(_)\___
 '''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -44,22 +44,17 @@ crdNum = int(crdNum)
 word1 = driver.find_elements_by_class_name("TermText.notranslate.lang-en")
 word2 = driver.find_elements_by_class_name("TermText.notranslate.lang-it")
 
-Questions = []
-Answers = []
+List1 = []
+List2 = []
 
 #Putting all the words into their corrasponding lists
+print(word1)
 print("Scraping List... ")
 i = 0
-x = 0
-while (i <= Questions.len()):
-	List1.append(Questions[i].text)
-	List2.append(Answers[i].text)
+while i < len(word1) - 1:
+	List1.append(word1[i].text)
+	List2.append(word2[i].text)
 	i += 1
-for answer in Questions:
-    if answer = #(text on screen):
-        x = Questions.index(answer)
-#type Quizlet_Question[x] into quizlet as the solution
-
 print(List1)
 print(List2)
 
