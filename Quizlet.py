@@ -1,5 +1,4 @@
 #Code made by Jake R
-#Suck on dez nutz
 srtIcon = '''
    ____          _       _        _     ____          _     ___      ___
   / __ \        (_)     | |      | |   |  _ \        | |   |__ \    / _ \
@@ -27,8 +26,8 @@ LogIn.click()
 uname = driver.find_element_by_name("username")
 pword = driver.find_element_by_name("password")
 
-uname.send_keys("Jacob_Rothstein9")
-pword.send_keys("PlantCloud9!")
+uname.send_keys("XXXX") #UPDATE USERNAME
+pword.send_keys("XXXX") #UPDATE USER PASSWORD
 
 LogInBtn = driver.find_element_by_xpath("/html/body/div[8]/div/div[2]/form/button")
 LogInBtn.click()
